@@ -105,7 +105,7 @@ module.exports = {
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
     quotes: 0,
-    "max-len": ["error", { ignoreCommetns: true }],
+    "max-len": ["error", { ignoreCommetns: true, code: 100 }],
   },
   globals: {
     __IS_DEV__: true,

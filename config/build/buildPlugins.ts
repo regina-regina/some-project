@@ -3,6 +3,7 @@ import path from "path";
 import webpack, { DefinePlugin } from "webpack";
 import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 export function buildPlugins({
   paths,
@@ -21,5 +22,6 @@ export function buildPlugins({
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ];
 }
