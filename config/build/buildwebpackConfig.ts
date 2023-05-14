@@ -6,11 +6,11 @@ import { buildPlugins } from "./buildPlugins";
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(
-  options: BuildOptions
+  options: BuildOptions,
 ): webpack.Configuration {
   const { mode, paths, isDev } = options;
   return {
-    mode: mode,
+    mode,
     entry: paths.entry,
     output: {
       filename: "[name].[contenthash].js",

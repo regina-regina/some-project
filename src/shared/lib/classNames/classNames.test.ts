@@ -7,7 +7,7 @@ describe("classNames", () => {
 
   test("with additional class", () => {
     expect(classNames("someClass", {}, ["class1", "class2"])).toBe(
-      "someClass class1 class2"
+      "someClass class1 class2",
     );
   });
 
@@ -16,13 +16,13 @@ describe("classNames", () => {
       classNames("someClass", { isOpen: true, isClose: false }, [
         "class1",
         "class2",
-      ])
+      ]),
     ).toBe("someClass class1 class2 isOpen");
   });
 
   test("with mods undefined", () => {
     expect(
-      classNames("someClass", { isOpen: undefined }, ["class1", "class2"])
+      classNames("someClass", { isOpen: undefined }, ["class1", "class2"]),
     ).toBe("someClass class1 class2");
   });
 });
