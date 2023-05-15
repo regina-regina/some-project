@@ -77,9 +77,7 @@ module.exports = {
   extends: ["plugin:react/recommended", "airbnb"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: "latest",
     sourceType: "module",
   },
@@ -103,22 +101,28 @@ module.exports = {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
-    "max-len": ["error", { ignoreComments: true, code: 105 }],
+    "object-curly-newline": ["warn", { minProperties: 3 }],
+    "max-len": [
+      "error",
+      {
+        ignoreComments: true,
+        code: 105,
+      },
+    ],
     "i18next/no-literal-string": [
       "error",
-      { markupOnly: true, ignoreAttribute: ["data-testid", "to"] },
+      {
+        markupOnly: true,
+        ignoreAttribute: ["data-testid", "to"],
+      },
     ],
     quotes: 0,
   },
-  globals: {
-    __IS_DEV__: true,
-  },
+  globals: { __IS_DEV__: true },
   overrides: [
     {
       files: ["**/src/**/*.test.{ts, tsx}"],
-      rules: {
-        "i18next/no-literal-string": "off",
-      },
+      rules: { "i18next/no-literal-string": "off" },
     },
   ],
 };
