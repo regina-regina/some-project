@@ -32,7 +32,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "no-restricted-globals": "warn",
-    "object-curly-newline": ["warn", { minProperties: 3 }],
+    "object-curly-newline": ["warn", { minProperties: 2 }],
     "max-len": [
       "error",
       {
