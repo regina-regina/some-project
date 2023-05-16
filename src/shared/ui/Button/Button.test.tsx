@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { useTranslation } from "react-i18next";
 import { Button, ThemeButton } from "./Button";
 
 describe("Button", () => {
