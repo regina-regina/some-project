@@ -31,6 +31,7 @@ module.exports = {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
+    "no-restricted-globals": "warn",
     "object-curly-newline": ["warn", { minProperties: 3 }],
     "max-len": [
       "error",
