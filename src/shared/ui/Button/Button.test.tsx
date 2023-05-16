@@ -4,10 +4,9 @@ import { useTranslation } from "react-i18next";
 import { Button, ThemeButton } from "./Button";
 
 describe("Button", () => {
-  const { t } = useTranslation();
   test("Check button class", () => {
-    render(<Button theme={ThemeButton.CLEAR}>{t("TEST")}</Button>);
-    // expect(screen.getByText("TEST")).toBeInTheDocument();
+    // eslint-disable-next-line i18next/no-literal-string
+    render(<Button theme={ThemeButton.CLEAR}>TEST</Button>);
     expect(screen.getByText("TEST")).toHaveClass("clear");
     screen.debug();
   });
