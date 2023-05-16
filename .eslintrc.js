@@ -25,14 +25,13 @@ module.exports = {
     "no-unused-vars": "warn",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "warn",
+    "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
     "no-shadow": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "object-curly-newline": ["warn", { minProperties: 3 }],
-    "react/jsx-props-no-spreading": "off",
     "max-len": [
       "error",
       {
