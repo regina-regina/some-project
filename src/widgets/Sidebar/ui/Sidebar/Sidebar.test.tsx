@@ -1,7 +1,9 @@
 import React from "react";
-import { fireEventbuild-storybook, screen } from "@testing-library/react";
+import { screen, fireEvent } from "@testing-library/react";
+// import { fireEventbuild-storybook, screen } from "@testing-library/s";
 import { withTranslation } from "react-i18next";
 import { renderWithTranslation } from "shared/lib/tests/renderWithTranslation/renderWithTranslation";
+import { fireEventbuild } from "@storybook/testing-library";
 import { Sidebar } from "./Sidebar";
 
 describe("Sidebar", () => {
