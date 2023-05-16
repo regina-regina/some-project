@@ -10,7 +10,9 @@ export default {
   argTypes: { backgroundColor: { control: "color" } },
 } as ComponentMeta<typeof About>;
 
-const Template: ComponentStory<typeof About> = (args) => <About {...args} />;
+const Template: ComponentStory<typeof About> = (args) => (
+  <About {...(args as Record<string, any>)} />
+);
 
 export const NormalAbout = Template.bind({});
 NormalAbout.args = {};
