@@ -33,6 +33,8 @@ module.exports = {
     "no-underscore-dangle": "off",
     "no-restricted-globals": "warn",
     "object-curly-newline": ["warn", { minProperties: 2 }],
+    "no-multiple-empty-lines": "warn",
+    "comma-dangle": "warn",
     "max-len": [
       "error",
       {
