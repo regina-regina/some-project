@@ -1,5 +1,4 @@
 import React, {
-  MouseEventHandler,
   ReactNode,
   useCallback,
   useEffect,
@@ -46,7 +45,7 @@ export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
         closeHandler();
       }
     },
-    [closeHandler]
+    [closeHandler],
   );
 
   useEffect(() => {

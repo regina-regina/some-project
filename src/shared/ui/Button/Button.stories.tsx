@@ -32,7 +32,7 @@ export const OutlineSizeXL = Template.bind({});
 OutlineSizeXL.args = {
   children: "Text",
   theme: ButtonTheme.OUTLINE,
-  size: ButtonSize.XL
+  size: ButtonSize.XL,
 };
 
 export const Background = Template.bind({});

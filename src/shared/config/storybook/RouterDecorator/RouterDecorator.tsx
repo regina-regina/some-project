@@ -9,4 +9,3 @@ export const RouterDecorator = (story: () => Story) => (
     <BrowserRouter>{story() as unknown as ReactNode}</BrowserRouter>
   </Suspense>
 );
-
