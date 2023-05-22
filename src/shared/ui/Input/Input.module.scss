@@ -3,13 +3,11 @@
   border: 1px solid var(--secondary-color);
   width: 100%;
   border-radius: 5px;
-  padding: 5px 5px;
+  padding: 5px;
+
   &:focus {
     outline: none;
   }
-}
-
-.inputWrapper {
 }
 
 .placeholder {
