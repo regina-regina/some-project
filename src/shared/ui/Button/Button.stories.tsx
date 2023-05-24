@@ -61,12 +61,20 @@ SquareSizeL.args = {
   square: true,
   size: ButtonSize.L,
 };
+
 export const SquareSizeXL = Template.bind({});
 SquareSizeXL.args = {
   children: ">",
   theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
   size: ButtonSize.XL,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: '>',
+  theme: ButtonTheme.OUTLINE,
+  disabled: true,
 };
 
 export const OutlineDark = Template.bind({});

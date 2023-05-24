@@ -1,3 +1,6 @@
-export interface loginSchema {
+export interface LoginSchema {
   username: string;
+  password: string;
+  isLoading: boolean;
+  error?: string;
 }
