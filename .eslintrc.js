@@ -40,11 +40,12 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "no-param-reassign": "off",
+    "implicit-arrow-linebreak": "off",
     "max-len": [
       "error",
       {
         ignoreComments: true,
-        code: 105,
+        code: 120,
       },
     ],
     "i18next/no-literal-string": [
