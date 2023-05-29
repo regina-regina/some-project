@@ -16,7 +16,7 @@ export const loginByUsername = createAsyncThunk<
   try {
     const response = await axios.post<User>(
       "http://localhost:8000/login",
-      authData
+      authData,
     );
 
     if (!response.data) {

@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "regina",
+    "lastname": "p",
+    "age": "25",
+    "currency": "rub",
+    "country": "russia",
+    "city": "moscow",
+    "username": "regina",
+    "avatar": ""
+  }
 }

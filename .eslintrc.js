@@ -22,7 +22,7 @@ module.exports = {
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
@@ -56,6 +56,7 @@ module.exports = {
       },
     ],
     quotes: 0,
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
   globals: { __IS_DEV__: true },
   overrides: [

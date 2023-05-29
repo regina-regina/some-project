@@ -45,13 +45,13 @@ describe("loginByUsername.test", () => {
 
   test("success login", async () => {
     mockedAxios.post.mockReturnValue(
-      Promise.resolve({ data: { username: "123", id: "1" } })
+      Promise.resolve({ data: { username: "123", id: "1" } }),
     );
     const thunk = new TestAsyncThunk(loginByUsername);
     const result = await thunk.callThunk({ username: "123", password: "123" });
     expect(thunk.dispatch).toHaveBeenCalledTimes(3);
     expect(thunk.dispatch).toHaveBeenCalledWith(
-      userActions.setAuthdata({ username: "123", id: "1" })
+      userActions.setAuthdata({ username: "123", id: "1" }),
     );
     expect(mockedAxios.post).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe("fulfilled");

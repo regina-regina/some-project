@@ -59,7 +59,7 @@ export const Modal = ({
         closeHandler();
       }
     },
-    [closeHandler]
+    [closeHandler],
   );
 
   useEffect(() => {

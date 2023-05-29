@@ -27,7 +27,7 @@ export const Input = memo(
       (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target?.value);
       },
-      [onChange]
+      [onChange],
     );
     return (
       <div className={classNames(cls.inputWrapper, {}, [className])}>
@@ -40,5 +40,5 @@ export const Input = memo(
         />
       </div>
     );
-  }
+  },
 );
