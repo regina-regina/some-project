@@ -16,13 +16,11 @@ export const Primary = Template.bind({});
 Primary.args = {
   placeholder: "Type text",
   value: "this is text",
-  isOpen: true,
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
   placeholder: "Type text",
   value: "this is text",
-  isOpen: true,
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

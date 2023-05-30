@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "noEmit": false,
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
@@ -10,17 +11,42 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "strict": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "paths": {
-      "*": ["./src/*"]
+      "*": ["./src/*"],
+      "app": ["./src/app*"],
+      "pages": ["./src/pages*"],
+      "entities": ["./src/entities*"],
+      "features": ["./src/features*"],
+      "shared": ["./src/shared*"],
+      "widgets": ["./src/widgets*"]
     }
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "moduleResolution": "node"
     }
   },
   "include": [
+    "./global.d.ts",
+    "./src/app/types/global.d.ts",
     "./config/jest/setupTests.ts",
-    "src"
-, "stories"  ]
+    "src",
+    "stories",
+    "**/*.d.ts",
+    "**/*.tsx",
+    "**/*.ts",
+    "**/*.html",
+    "**/*.css",
+    "**/*.scss",
+    "**/*module.scss",
+    "**/*.svg",
+    "./src/**/*.ts",
+  ],
+  "exclude": [
+    "./json-server"
+  ]
 }
+

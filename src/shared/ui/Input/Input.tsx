@@ -30,8 +30,8 @@ export const Input = memo(
       [onChange],
     );
     return (
-      <div className={classNames(cls.inputWrapper, {}, [className])}>
-        {placeholder && <div className={cls.placeholder}>{placeholder}</div>}
+      <div className={classNames('inputWrapper', {}, [className])}>
+        {placeholder && <div className={placeholder}>{placeholder}</div>}
         <input
           className={classNames(cls.Input, {}, [className])}
           type={type}

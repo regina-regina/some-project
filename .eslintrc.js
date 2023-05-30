@@ -42,6 +42,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": "error",
     "no-param-reassign": "off",
     "implicit-arrow-linebreak": "off",
+    "no-undef": "off",
     "max-len": [
       "error",
       {
