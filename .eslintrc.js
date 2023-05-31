@@ -44,7 +44,7 @@ module.exports = {
     "implicit-arrow-linebreak": "off",
     "no-undef": "off",
     "max-len": [
-      "error",
+      "warn",
       {
         ignoreComments: true,
         code: 120,
