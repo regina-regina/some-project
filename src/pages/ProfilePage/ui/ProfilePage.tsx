@@ -1,27 +1,28 @@
+import { Country } from "entities/Country";
+import { Currency } from "entities/Currency";
 import {
-  ProfileCard,
   fetchProfileData,
-  getProfileData,
   getProfileError,
   getProfileForm,
   getProfileIsLoading,
   getProfileReadonly,
   getProfileValidateErrors,
   profileActions,
+  ProfileCard,
   profileReducer,
+  ValidateProfileError,
 } from "entities/Profile";
 import React, { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import { classNames } from "shared/lib/classNames/classNames";
 import {
   DynamicModuleLoader,
   ReducersList,
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { useSelector } from "react-redux";
-import { Currency } from "entities/Currency";
-import { Country } from "entities/Country";
 import { Text, TextTheme } from "shared/ui/Text/Text";
+
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 
 const reducers: ReducersList = {
@@ -43,7 +44,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const validateErrors = useSelector(getProfileValidateErrors);
 
   useEffect(() => {
-    dispatch(fetchProfileData());
+    if (__PROJECT__ !== "storybook") {
+      dispatch(fetchProfileData());
+    }
   }, [dispatch]);
 
   const onChangeFirstname = useCallback(
@@ -102,14 +105,28 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [dispatch]
   );
 
+  const valudateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t("Ошибка сервера"),
+    [ValidateProfileError.INCORRECT_AGE]: t("Неправильный возраст"),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t("Неправильно указана страна"),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t(
+      "Неверные данные пользователя"
+    ),
+    [ValidateProfileError.NO_DATA]: t("Нет данных"),
+  };
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames("", {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length
           ? validateErrors.map((err) => (
-            <Text theme={TextTheme.ERROR} text={err} />
-          ))
+              <Text
+                theme={TextTheme.ERROR}
+                text={valudateErrorTranslates[err]}
+                key={err}
+              />
+            ))
           : null}
         <ProfileCard
           data={formData}

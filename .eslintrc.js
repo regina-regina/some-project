@@ -13,9 +13,9 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
-    "react/jsx-indent": [2, 2],
-    "react/jsx-indent-props": [2, 2],
-    indent: [2, 2],
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    indent: "off",
     "react/jsx-filename-extension": [
       2,
       { extensions: [".js", ".jsx", ".tsx"] },
@@ -59,7 +59,7 @@ module.exports = {
     ],
     quotes: 0,
   },
-  globals: { __IS_DEV__: true, __API__: true },
+  globals: { __IS_DEV__: true, __API__: true, __PROJECT__: true },
   overrides: [
     {
       files: ["**/src/**/*.{test,stories}.{ts, tsx}"],

@@ -1,6 +1,6 @@
-import { ProfileSchema, Profile } from "entities/Profile/model/types/profile";
+import { ProfileSchema, Profile, ValidateProfileError } from "entities/Profile/model/types/profile";
 
-export { ProfileSchema, Profile };
+export { ProfileSchema, Profile, ValidateProfileError };
 
 export { profileActions, profileReducer } from "./model/slice/profileSlice";
 

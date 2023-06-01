@@ -8,10 +8,9 @@ export interface BuildPath {
 }
 
 export interface BuildEnv {
-  mode: BuildMode,
-  port: number,
+  mode: BuildMode;
+  port: number;
   apiUrl: string;
-
 }
 
 export interface BuildOptions {
@@ -20,4 +19,5 @@ export interface BuildOptions {
   isDev: boolean;
   port: number;
   apiUrl: string;
+  project: "frontend" | "storybook" | "jest";
 }

@@ -43,10 +43,7 @@
     "**/*.scss",
     "**/*module.scss",
     "**/*.svg",
-    "./src/**/*.ts",
+    "./src/**/*.ts"
   ],
-  "exclude": [
-    "./json-server"
-  ]
+  "exclude": ["./json-server"]
 }
-
