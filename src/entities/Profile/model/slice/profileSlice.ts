@@ -38,7 +38,7 @@ const profileSlice = createSlice({
           state.isLoading = false;
           state.data = action.payload;
           state.form = action.payload;
-        }
+        },
       )
       .addCase(fetchProfileData.rejected, (state, action) => {
         state.isLoading = false;
@@ -57,7 +57,7 @@ const profileSlice = createSlice({
           state.form = action.payload;
           state.readonly = true;
           state.validateError = undefined;
-        }
+        },
       )
       .addCase(updateProfileData.rejected, (state, action) => {
         state.isLoading = false;

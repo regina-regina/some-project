@@ -1,8 +1,11 @@
 import * as webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import { buildCssLoader } from "./loaders/buildCssLoader";
+import { buildBabelLoader } from "./loaders/buildBabelLaoder";
 
-export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  const { isDev } = options;
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: [
@@ -17,6 +20,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
     exclude: /node_modules/,
   };
+
+  const babelLoader = buildBabelLoader(options);
 
   const cssLoader = buildCssLoader(isDev);
 

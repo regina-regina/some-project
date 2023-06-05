@@ -35,7 +35,7 @@ export const Text = memo((props: TextProps) => {
       className={classNames(
         cls.Text,
         { [cls[theme]]: true, [cls[align]]: true },
-        [className]
+        [className],
       )}
     >
       {title && <p className={cls.title}>{title}</p>}

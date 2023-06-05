@@ -26,7 +26,7 @@ export const Select = memo(
         const { value } = e.target;
         onChange?.(value);
       },
-      [onChange]
+      [onChange],
     );
 
     const optionList = useMemo(
@@ -36,7 +36,7 @@ export const Select = memo(
             {opt.content}
           </option>
         )),
-      [options]
+      [options],
     );
 
     return (
@@ -47,5 +47,5 @@ export const Select = memo(
         </select>
       </div>
     );
-  }
+  },
 );

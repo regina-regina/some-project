@@ -21,7 +21,7 @@ export const CurrencySelect = memo(
         { value: Currency.EUR, content: Currency.EUR },
         { value: Currency.USD, content: Currency.USD },
       ],
-      []
+      [],
     );
 
     const onChangeHandler = useCallback((value: string) => {
@@ -38,5 +38,5 @@ export const CurrencySelect = memo(
         readonly={readonly}
       />
     );
-  }
+  },
 );

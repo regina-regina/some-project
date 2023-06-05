@@ -23,7 +23,7 @@ export const CountrySelect = memo(
         { value: Country.Ukraine, content: Country.Ukraine },
         { value: Country.Kazakhstan, content: Country.Kazakhstan },
       ],
-      []
+      [],
     );
 
     const onChangeHandler = useCallback((value: string) => {
@@ -40,5 +40,5 @@ export const CountrySelect = memo(
         readonly={readonly}
       />
     );
-  }
+  },
 );

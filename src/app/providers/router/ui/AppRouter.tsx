@@ -15,7 +15,7 @@ const AppRouter = () => {
         }
         return true;
       }),
-    [isAuth]
+    [isAuth],
   );
 
   return (

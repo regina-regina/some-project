@@ -29,7 +29,7 @@ export const Input = memo(
       (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target?.value);
       },
-      [onChange]
+      [onChange],
     );
     return (
       <div
@@ -47,5 +47,5 @@ export const Input = memo(
         />
       </div>
     );
-  }
+  },
 );
