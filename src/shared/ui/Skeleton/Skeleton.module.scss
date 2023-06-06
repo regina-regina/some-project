@@ -1,5 +1,5 @@
 .skeleton {
-  box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
+  box-shadow: 0 4px 10px 0 #21212126;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -13,12 +13,13 @@
   top: 0;
   height: 100%;
   width: 150px;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--skeleton-color) 50%,
-    transparent 100%
-  );
+  background:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      var(--skeleton-color) 50%,
+      transparent 100%
+    );
   animation: load 1.3s cubic-bezier(0.8, 0, 0.4, 1) infinite;
 }
 
@@ -26,6 +27,7 @@
   from {
     left: -150px;
   }
+
   to {
     left: 100%;
   }

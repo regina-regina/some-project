@@ -6,10 +6,29 @@
   margin: 0 auto;
 }
 
+.avatarWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .title {
   margin-top: 20px;
 }
 
 .skeleton {
   margin-top: 15px;
+}
+
+.articleInfo {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.block {
+  margin-top: 16px;
 }

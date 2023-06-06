@@ -43,6 +43,7 @@ module.exports = {
     "no-param-reassign": "off",
     "implicit-arrow-linebreak": "off",
     "no-undef": "off",
+    "operator-linebreak": "warn",
     "max-len": [
       "warn",
       {
