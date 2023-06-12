@@ -1,5 +1,5 @@
 .skeleton {
-  box-shadow: 0 4px 10px 0 #21212126;
+  box-shadow: 0 4px 10px 0 var(--skeleton-shadow);
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -20,7 +20,7 @@
       var(--skeleton-color) 50%,
       transparent 100%
     );
-  animation: load 1.3s cubic-bezier(0.8, 0, 0.4, 1) infinite;
+  animation: load 1.3s cubic-bezier(1, 0.5, 0.4, 1) infinite;
 }
 
 @keyframes load {
