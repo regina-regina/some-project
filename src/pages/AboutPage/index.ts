@@ -1,3 +1,3 @@
 import { AboutAsync } from './ui/About.async';
 
-export { AboutAsync as About };
+export { AboutAsync as AboutPage };

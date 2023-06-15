@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,60 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "4Cljjzl"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123asfasf",
+      "id": "AEM4Dvc"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123asfasf",
+      "id": "IFEOWl0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет мир",
+      "id": "dBacYRZ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "хехехехе",
+      "id": "rBX_C-e"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "фыафыа",
+      "id": "5k0ApX-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsdfsd",
+      "id": "w-HDIRq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdasdasd",
+      "id": "MVvGQoZ"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "qqqqqqqqqqqqqqqqqqqq",
+      "id": "GqpClpi"
     }
   ],
   "users": [
@@ -108,24 +164,38 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fneural.love%2Fai-art-generator%2F1eda2b3b-c077-6c98-9866-4f0709c2aa66%2Frealisitic-portrait-medieval-fantasy-long-dirty-blonde-hair-woman-dark-brown-eyes-left-eye-patch-bla&psig=AOvVaw2HcIqih6fLyx9F1SsNhY2N&ust=1686152493487000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjYmtX9rv8CFQAAAAAdAAAAABAK"
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fneural.love%2Fai-art-generator%2F1eda2b3b-c077-6c98-9866-4f0709c2aa66%2Frealisitic-portrait-medieval-fantasy-long-dirty-blonde-hair-woman-dark-brown-eyes-left-eye-patch-bla&psig=AOvVaw2HcIqih6fLyx9F1SsNhY2N&ust=1686152493487000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjYmtX9rv8CFQAAAAAdAAAAABAK"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fneural.love%2Fai-art-generator%2F1eda2b3b-c077-6c98-9866-4f0709c2aa66%2Frealisitic-portrait-medieval-fantasy-long-dirty-blonde-hair-woman-dark-brown-eyes-left-eye-patch-bla&psig=AOvVaw2HcIqih6fLyx9F1SsNhY2N&ust=1686152493487000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjYmtX9rv8CFQAAAAAdAAAAABAK"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Regina",
+      "lastname": "Regina",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+    },
+    {
+      "id": "2",
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ulbi tv",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ]
 }

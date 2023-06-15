@@ -48,7 +48,7 @@ module.exports = {
       "warn",
       {
         ignoreComments: true,
-        code: 120,
+        code: 300,
       },
     ],
     "i18next/no-literal-string": [
