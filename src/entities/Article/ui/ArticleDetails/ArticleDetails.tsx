@@ -132,5 +132,5 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(
         </div>
       </DynamicModuleLoader>
     );
-  }
+  },
 );

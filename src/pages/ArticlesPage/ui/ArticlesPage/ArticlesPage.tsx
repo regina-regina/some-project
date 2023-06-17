@@ -1,6 +1,8 @@
 import { FC, memo } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
+import { ArticleList } from "entities/Article";
+import { ARTICLES_MOCK } from "entities/Article/ui/ArticleList/articlesMock";
 import cls from "./ArticlesPage.module.scss";
 
 interface ArticlesPageProps {
@@ -13,7 +15,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
 
   return (
     <div className={classNames(cls.articlesPage, {}, [className])}>
-      {t(" ARTICLES PAGE")}
+      <ArticleList articles={ARTICLES_MOCK} isLoading />
     </div>
   );
 };

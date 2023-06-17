@@ -10,8 +10,7 @@ interface ArticleImageBlockComponentProps {
   block: ArticleImageBlock;
 }
 
-export const ArticleImageBlockComponent: FC<ArticleImageBlockComponentProps> =
-  memo((props: ArticleImageBlockComponentProps) => {
+export const ArticleImageBlockComponent: FC<ArticleImageBlockComponentProps> = memo((props: ArticleImageBlockComponentProps) => {
     const { className, block } = props;
     const { t } = useTranslation();
 

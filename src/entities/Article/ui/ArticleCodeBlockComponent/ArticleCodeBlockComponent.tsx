@@ -10,8 +10,7 @@ interface ArticleCodeBlockComponentProps {
   block: ArticleCodeBlock;
 }
 
-export const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> =
-  memo((props: ArticleCodeBlockComponentProps) => {
+export const ArticleCodeBlockComponent: FC<ArticleCodeBlockComponentProps> = memo((props: ArticleCodeBlockComponentProps) => {
     const { className, block } = props;
     const { t } = useTranslation();
 

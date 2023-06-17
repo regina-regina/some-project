@@ -20,7 +20,7 @@ export const updateProfileData = createAsyncThunk<
   try {
     const response = await extra.api.put<Profile>(
       `/profile/${formData?.id}`,
-      formData
+      formData,
     );
 
     if (!response.data) {
