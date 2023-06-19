@@ -25,6 +25,7 @@ import { Text, TextTheme } from "shared/ui/Text/Text";
 
 import { useParams } from "react-router-dom";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { Page } from "shared/ui/Page/Page";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 
 const reducers: ReducersList = {
@@ -56,56 +57,56 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     (value?: string) => {
       dispatch(profileActions.updateProfile({ first: value || "" }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeLastname = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ lastname: value || "" }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeAge = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ age: Number(value || "") }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeCity = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ city: value || "" }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeAvatar = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ avatar: value || "" }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeUsername = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ username: value || "" }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeCurrency = useCallback(
     (currency: Currency) => {
       dispatch(profileActions.updateProfile({ currency }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeCountry = useCallback(
     (country: Country) => {
       dispatch(profileActions.updateProfile({ country }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const valudateErrorTranslates = {
@@ -113,14 +114,14 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_AGE]: t("Неправильный возраст"),
     [ValidateProfileError.INCORRECT_COUNTRY]: t("Неправильно указана страна"),
     [ValidateProfileError.INCORRECT_USER_DATA]: t(
-      "Неверные данные пользователя",
+      "Неверные данные пользователя"
     ),
     [ValidateProfileError.NO_DATA]: t("Нет данных"),
   };
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames("", {}, [className])}>
+      <Page className={classNames("", {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length
           ? validateErrors.map((err) => (
@@ -145,7 +146,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           onChangeCountry={onChangeCountry}
           readonly={readonly}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

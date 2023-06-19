@@ -1,21 +1,9 @@
-import { memo, useCallback } from "react";
-import WatchIcon from "shared/assets/icons/WatchIcon.svg";
-import { classNames } from "shared/lib/classNames/classNames";
-import { Avatar } from "shared/ui/Avatar/Avatar";
-import { Button } from "shared/ui/Button";
-import { ButtonTheme } from "shared/ui/Button/Button";
-import { Card } from "shared/ui/Card/Card";
-import { Icon } from "shared/ui/Icon/Icon";
-import { Text } from "shared/ui/Text/Text";
-import { Skeleton } from "shared/ui/Skeleton/Skeleton";
-import {
-  Article,
-  ArticleBlockType,
-  ArticleTextBlock,
-  ArticleView,
-} from "../../model/types/article";
-import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import cls from "./ArticleListItem.module.scss";
+import { memo } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Card } from 'shared/ui/Card/Card';
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { ArticleView } from '../../model/types/article';
+import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemSkeletonProps {
   className?: string;

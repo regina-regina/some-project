@@ -44,6 +44,7 @@ module.exports = {
     "implicit-arrow-linebreak": "off",
     "no-undef": "off",
     "operator-linebreak": "warn",
+    "react/no-array-index-key": "warn",
     "max-len": [
       "warn",
       {
