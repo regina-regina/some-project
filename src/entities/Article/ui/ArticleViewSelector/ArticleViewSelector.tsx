@@ -38,6 +38,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
           className={classNames(cls.btnAll, { [cls.notSelected]: item.view !== view })}
           onClick={onClick(item.view)}
           theme={ButtonTheme.CLEAR}
+          key={item.title}
         >
           {t(item.title)}
         </Button>

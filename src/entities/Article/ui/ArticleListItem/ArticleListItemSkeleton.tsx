@@ -22,13 +22,12 @@ export const ArticleListItemSkeleton = memo(
             cls[view],
           ])}
         >
-          <Card className={cls.card}>
+          <Card>
             <div className={cls.header}>
               <Skeleton
                 width={30}
                 height={30}
                 border="50%"
-                className={cls.avatar}
               />
               <Skeleton width={70} height={16} className={cls.username} />
             </div>
