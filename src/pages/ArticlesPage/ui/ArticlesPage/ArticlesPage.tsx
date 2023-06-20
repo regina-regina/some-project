@@ -10,6 +10,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { Page } from "shared/ui/Page/Page";
 import { ArticlesPageFilters } from "pages/ArticlesPageFilters/ArticlesPageFilters";
+import { useSearchParams } from "react-router-dom";
 import {
   getArticlesPageIsLoading,
   getArticlesPageView,
@@ -36,13 +37,14 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
+  const [searchParams] = useSearchParams();
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
   }, [dispatch]);
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage());
+    dispatch(initArticlesPage(searchParams));
   });
 
   return (
@@ -52,7 +54,12 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
         className={classNames(cls.articlesPage, {}, [className])}
       >
         <ArticlesPageFilters />
-        <ArticleList className={cls.list} articles={articles} view={view} isLoading={isLoading} />
+        <ArticleList
+          className={cls.list}
+          articles={articles}
+          view={view}
+          isLoading={isLoading}
+        />
       </Page>
     </DynamicModuleLoader>
   );
