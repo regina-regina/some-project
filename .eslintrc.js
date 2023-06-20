@@ -45,6 +45,7 @@ module.exports = {
     "no-undef": "off",
     "operator-linebreak": "warn",
     "react/no-array-index-key": "warn",
+    "function-paren-newline": "warn",
     "max-len": [
       "warn",
       {
