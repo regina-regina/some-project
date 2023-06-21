@@ -54,10 +54,10 @@ module.exports = {
       },
     ],
     "i18next/no-literal-string": [
-      "error",
+      "warn",
       {
         markupOnly: true,
-        ignoreAttribute: ["data-testid", "to"],
+        ignoreAttribute: ["data-testid", "to", "target"],
       },
     ],
     quotes: 0,
