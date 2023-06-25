@@ -23,7 +23,7 @@ class BT {
       return;
     }
 
-    const currentNode = this.root;
+    let currentNode = this.root;
 
     while (currentNode) {
       if (newNode.value < currentNode.value) {
@@ -31,10 +31,28 @@ class BT {
           currentNode.left = newNode;
           return;
         }
+        currentNode = currentNode.left;
       } else if (newNode.value > currentNode.value) {
         if (!currentNode.right) {
           currentNode.right = newNode;
           return;
+        }
+        currentNode = currentNode.right;
+      }
+    }
+  }
+
+  levelOrder() {
+    const queue = [];
+    if (this.root) {
+      queue.push(this.root);
+      while (queue.length) {
+        const curr = queue.unshift();
+        if (curr.left) {
+          queue.push(curr.left);
+        }
+        if (curr.right) {
+          queue.push(curr.right);
         }
       }
     }
