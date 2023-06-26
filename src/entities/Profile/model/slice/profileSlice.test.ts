@@ -1,12 +1,9 @@
-import {
-  profileActions,
-  profileReducer,
-  ProfileSchema,
-  updateProfileData,
-  ValidateProfileError,
-} from "entities/Profile";
 import { Country } from "entities/Country";
 import { Currency } from "entities/Currency";
+import { profileActions, profileReducer } from "./profileSlice";
+import { ProfileSchema, ValidateProfileError } from "../types/profile";
+import { updateProfileData } from "../services/updateProfileData/updateProfileData";
+
 
 const data = {
   username: "admin",
@@ -23,7 +20,7 @@ describe("profileSlice.test", () => {
   test("test set readonly", () => {
     const state: DeepPartial<ProfileSchema> = { readonly: false };
     expect(
-      profileReducer(state as ProfileSchema, profileActions.setReadonly(true)),
+      profileReducer(state as ProfileSchema, profileActions.setReadonly(true))
     ).toEqual({ readonly: true });
   });
 
@@ -31,7 +28,7 @@ describe("profileSlice.test", () => {
     const state: DeepPartial<ProfileSchema> = { data, form: { username: "" } };
 
     expect(
-      profileReducer(state as ProfileSchema, profileActions.cancelEdit()),
+      profileReducer(state as ProfileSchema, profileActions.cancelEdit())
     ).toEqual({
       readonly: true,
       validateErrors: undefined,
@@ -48,8 +45,8 @@ describe("profileSlice.test", () => {
         state as ProfileSchema,
         profileActions.updateProfile({
           username: "123456",
-        }),
-      ),
+        })
+      )
     ).toEqual({
       form: { username: "123456" },
     });
@@ -62,7 +59,7 @@ describe("profileSlice.test", () => {
     };
 
     expect(
-      profileReducer(state as ProfileSchema, updateProfileData.pending),
+      profileReducer(state as ProfileSchema, updateProfileData.pending)
     ).toEqual({
       isLoading: true,
       validateErrors: undefined,
@@ -77,8 +74,8 @@ describe("profileSlice.test", () => {
     expect(
       profileReducer(
         state as ProfileSchema,
-        updateProfileData.fulfilled(data, ""),
-      ),
+        updateProfileData.fulfilled(data, "")
+      )
     ).toEqual({
       isLoading: false,
       validateErrors: undefined,

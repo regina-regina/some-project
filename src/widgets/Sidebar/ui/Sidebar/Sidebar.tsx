@@ -6,7 +6,7 @@ import { LangSwitcher } from "shared/ui/LangSwitcher";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
 import { useSelector } from "react-redux";
-import { getSidebarItems } from "widgets/Sidebar/model/selectors/getSidebarItems";
+import { getSidebarItems } from "../../model/selectors/getSidebarItems";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 import cls from "./Sidebar.module.scss";
 

@@ -11,7 +11,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "i18next",
+    "react-hooks",
+    "wonderland-plugin",
+  ],
   rules: {
     "react/jsx-indent": "off",
     "react/jsx-indent-props": "off",
@@ -61,6 +67,7 @@ module.exports = {
       },
     ],
     quotes: 0,
+    "wonderland-plugin/path-checker": "error",
   },
   globals: { __IS_DEV__: true, __API__: true, __PROJECT__: true },
   overrides: [
