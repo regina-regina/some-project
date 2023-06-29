@@ -13,7 +13,7 @@ export default {
 
 const Template: ComponentStory<typeof ArticleList> = (args) => (
   <ArticleList {...args} />
-);
+);у
 
 export const ArticleBig = Template.bind({});
 ArticleBig.args = {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-plusplus */
 /* eslint-disable max-classes-per-file */
 class Node {
@@ -75,7 +76,7 @@ function change(arr) {
   for (let i = 0; i < arr.length; i++) {
     obj[i] = arr[i];
   }
-  const newObj = Object.entries(obj).filter(([key, value]) => value % 2 == 0);
+  const newObj = Object.entries(obj).filter(([key, value]) => value % 2 === 0);
   const newArr = arr.filter((x) => x % 2 !== 0).sort((a, b) => a - b);
 
   for (let i = 0; i < newObj.length; i++) {
@@ -87,9 +88,17 @@ function change(arr) {
   return newArr;
 }
 
-console.log(change(arr));
+const arr2 = [1, 2, 3, 4, 5];
+const size = 1;
 
-// remember the structure with hash map
-// remove even numbers
-// sort array
-// insert even numbers on its place
+const chunk = function (arr, size) {
+  const res = [];
+  const a = [...arr];
+  for (let i = 0; i < arr.length; i += size) {
+    const x = a.splice(i, size);
+    res.push(x);
+  }
+  return console.log(res);
+};
+
+chunk(arr2, size);
